@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{%block title %} Forms! {% endblock title %}</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='styles/style.css')}}"
+    />
+    {%block morehead%} {%endblock morehead%}
+  </head>
+  <body>
+    {% if error %}
+    <h1>{{error}}</h1>
+    {% endif %} {% block content %} {% endblock content %}
+
+    <ul>
+      <li>
+        <a href="{{url_for('home')}}">
+          <p>Home</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="{{url_for('profile')}}">
+          <p>Profile</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="{{url_for('feedback')}}">
+          <p>Feedback</p>
+        </a>
+      </li>
+    </ul>
+
+    {%block scripts%} {%endblock scripts%}
+  </body>
+</html>

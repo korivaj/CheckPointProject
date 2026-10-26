@@ -1,0 +1,51 @@
+{% extends "base.html" %} {%block content%}
+
+<h2>Profile</h2>
+
+
+
+<form method="POST">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+  </div>
+
+  <div>
+    <label for="quant">Quantity:</label>
+    <input type="number" id="quant" name="quant" min="1" max="42" required />
+  </div>
+
+  <div>
+    <label for="comments">Comments or Concerns:</label>
+    <textarea name="comments" id="comments" rows="4"></textarea>
+  </div>
+
+  <div>
+    <label for="rel">Relation to me:</label>
+    <select name="rel" id="rel">
+      <option value="">What is guests relation</option>
+      <option value="Parent">Parent</option>
+      <option value="Sibling">Sibling</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="accomodations">Accomodations</label>
+    <input
+      type="checkbox"
+      id="accomodations"
+      name="accomodations"
+      value="yes"
+    />
+  </div>
+
+  <button type="submit">Save Profile</button>
+
+</form>
+
+{%endblock content%}
