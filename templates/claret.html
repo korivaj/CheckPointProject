@@ -3,76 +3,55 @@
 {%block content%}
 
 <h2>Rate these Bikes</h2>
+<form method="POST">
+    
 <div> 
-    <img src="{{url_for('static', filename=images/Bikes/DUCATI-Panigale.jpg')}}">
+    <img src="{{url_for('static', filename='images/Bikes/DUCATI-Panigale.jpg')}}" class="bike_image">
 <div class="star-rating">
-    <input type="radio" id="star1" name="rating" value="1" />
-    <label for="star1" title="1 star">&#9733;</label>
-    <input type="radio" id="star2" name="rating" value="2" />
-    <label for="star2" title="2 stars">&#9733;</label>
-    <input type="radio" id="star3" name="rating" value="3" />
-    <label for="star3" title="3 stars">&#9733;</label>
-    <input type="radio" id="star4" name="rating" value="4" />
-    <label for="star4" title="4 stars">&#9733;</label>
-    <input type="radio" id="star5" name="rating" value="5" />
-    <label for="star5" title="5 stars">&#9733;</label>
-</div>
+      {% for i in range(1, 6) %}
+        <input type="radio" id="Panigale-star{{ i }}" name="DUCATI-Panigale" value="{{ i }}" />
+        <label for="Panigale-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+      {% endfor %}
+    </div>
 <div> 
-    <img src="{{url_for('static', filename=images/Bikes/2020DucatiDiavel.jpg')}}">
+    <img src="{{url_for('static', filename='images/Bikes/2020DucactiDiavel.jpg')}}" class="bike_image">
 <div class="star-rating">
-    <input type="radio" id="star1" name="rating" value="1" />
-    <label for="star1" title="1 star">&#9733;</label>
-    <input type="radio" id="star2" name="rating" value="2" />
-    <label for="star2" title="2 stars">&#9733;</label>
-    <input type="radio" id="star3" name="rating" value="3" />
-    <label for="star3" title="3 stars">&#9733;</label>
-    <input type="radio" id="star4" name="rating" value="4" />
-    <label for="star4" title="4 stars">&#9733;</label>
-    <input type="radio" id="star5" name="rating" value="5" />
-    <label for="star5" title="5 stars">&#9733;</label>
-</div>
+      {% for i in range(1, 6) %}
+        <input type="radio" id="Diavel-star{{ i }}" name="DucactiDiavel" value="{{ i }}" />
+        <label for="Diavel-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+      {% endfor %}
+    </div>
+
 <div> 
-    <img src="{{url_for('static', filename=images/Bikes/2022-indian-scout-bobber.jpg')}}">
+    <img src="{{url_for('static', filename='images/Bikes/2022-indian-scout-bobber.jpg')}}" class="bike_image">
 <div class="star-rating">
-    <input type="radio" id="star1" name="rating" value="1" />
-    <label for="star1" title="1 star">&#9733;</label>
-    <input type="radio" id="star2" name="rating" value="2" />
-    <label for="star2" title="2 stars">&#9733;</label>
-    <input type="radio" id="star3" name="rating" value="3" />
-    <label for="star3" title="3 stars">&#9733;</label>
-    <input type="radio" id="star4" name="rating" value="4" />
-    <label for="star4" title="4 stars">&#9733;</label>
-    <input type="radio" id="star5" name="rating" value="5" />
-    <label for="star5" title="5 stars">&#9733;</label>
-</div>
+      {% for i in range(1, 6) %}
+        <input type="radio" id="scout-star{{ i }}" name="indian-scout-bobber" value="{{ i }}" />
+        <label for="scout-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+      {% endfor %}
+    </div>
+
 <div> 
-    <img src="{{url_for('static', filename=images/Bikes/Kawasaki-Ninja-H2R.jpg')}}">
+    <img src="{{url_for('static', filename='images/Bikes/Kawasaki-Ninja-H2R.jpg')}}" class="bike_image">
 <div class="star-rating">
-    <input type="radio" id="star1" name="rating" value="1" />
-    <label for="star1" title="1 star">&#9733;</label>
-    <input type="radio" id="star2" name="rating" value="2" />
-    <label for="star2" title="2 stars">&#9733;</label>
-    <input type="radio" id="star3" name="rating" value="3" />
-    <label for="star3" title="3 stars">&#9733;</label>
-    <input type="radio" id="star4" name="rating" value="4" />
-    <label for="star4" title="4 stars">&#9733;</label>
-    <input type="radio" id="star5" name="rating" value="5" />
-    <label for="star5" title="5 stars">&#9733;</label>
-</div>
+      {% for i in range(1, 6) %}
+        <input type="radio" id="Ninja-star{{ i }}" name="Kawasaki-Ninja-H2R" value="{{ i }}" />
+        <label for="Ninja-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+      {% endfor %}
+    </div>
+
 <div> 
-    <img src="{{url_for('static', filename=images/Bikes/Keino+Cycles+Indian.jpg')}}">
+    <img src="{{url_for('static', filename='images/Bikes/Keino+Cycles+Indian.jpg')}}" class="bike_image">
 <div class="star-rating">
-    <input type="radio" id="star1" name="rating" value="1" />
-    <label for="star1" title="1 star">&#9733;</label>
-    <input type="radio" id="star2" name="rating" value="2" />
-    <label for="star2" title="2 stars">&#9733;</label>
-    <input type="radio" id="star3" name="rating" value="3" />
-    <label for="star3" title="3 stars">&#9733;</label>
-    <input type="radio" id="star4" name="rating" value="4" />
-    <label for="star4" title="4 stars">&#9733;</label>
-    <input type="radio" id="star5" name="rating" value="5" />
-    <label for="star5" title="5 stars">&#9733;</label>
+      {% for i in range(1, 6) %}
+        <input type="radio" id="Indian-star{{ i }}" name="Keino+Cycles+Indian" value="{{ i }}" />
+        <label for="Indian-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+      {% endfor %}
+    </div>
 </div>
+
+
 <button type="submit">Save</button>
+</form>
 
 {%endblock content%}

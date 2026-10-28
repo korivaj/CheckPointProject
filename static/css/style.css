@@ -16,16 +16,7 @@ h1 {
 color: #2c3e50;
 text-align: center;
 }
-.bird-image {
-max-width: 100%;
-height: auto;
-border-radius: 8px;
-margin: 20px 0;
-}
-.navigation {
-margin: 20px 0;
-text-align: center;
-}
+
 .navigation a {
 color: #3498db;
 text-decoration: none;
@@ -40,4 +31,8 @@ text-decoration: underline;
 .anime_image {
 max-width: 190px;
 max-height: 281px;
+}
+.bike_image{
+    max-width: 500px;
+    max-height: 500px;
 }
