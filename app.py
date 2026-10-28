@@ -1,7 +1,6 @@
 from flask import Flask,render_template,request
 
 app = Flask(__name__)
-app.secret_key = "4"
 
 @app.route("/")
 def home():
@@ -44,6 +43,20 @@ def profile():
 
 #     return render_template("feedbackForm.html")
 
-@app.route('/hurricane')
+@app.route('/hurricane',methods=['GET','POST'])
 def hurricane():
+    if request.method == "POST":
+            
+            rating = request.form.get("rating","")
+    
+            return render_template('hurricaneSubmit.html',rate = rating)
+
     return render_template('hurricane.html')
+
+@app.route('/claret')
+def claret():
+    return render_template('claret.html')
+
+@app.route('/tayandj')
+def tayandj():
+    return render_template('tayandj.html')

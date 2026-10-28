@@ -36,3 +36,8 @@ margin: 0 10px;
 color: #2980b9;
 text-decoration: underline;
 }
+
+.anime_image {
+max-width: 190px;
+max-height: 281px;
+}

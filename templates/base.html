@@ -6,7 +6,7 @@
     <title>{%block title %} Forms! {% endblock title %}</title>
     <link
       rel="stylesheet"
-      href="{{url_for('static',filename='styles/style.css')}}"
+      href="{{url_for('static',filename='css/style.css')}}"
     />
     {%block morehead%} {%endblock morehead%}
   </head>
@@ -17,21 +17,23 @@
 
     <ul>
       <li>
-        <a href="{{url_for('home')}}">
-          <p>Home</p>
-        </a>
+        <a href="{{url_for('home')}}">Home</a>
       </li>
-
+      <br>
       <li>
-        <a href="{{url_for('profile')}}">
-          <p>Profile</p>
-        </a>
+        <a href="{{url_for('profile')}}">Profile</a>
       </li>
-
+      <br>
       <li>
-        <a href="{{url_for('hurricane')}}">
-          <p>Hurricane</p>
-        </a>
+        <a href="{{url_for('hurricane')}}">Hurricane</a>
+      </li>
+      <br>
+      <li>
+        <a href="{{url_for('claret')}}">Bike</a>
+      </li>
+      <br>
+      <li>
+        <a href="{{url_for('tayandj')}}">Resident Evil</a>
       </li>
     </ul>
 
