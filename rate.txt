@@ -1,6 +1,6 @@
 <div class="star-rating">
       {% for i in range(1, 6) %}
-        <input type="radio" id="Indian-star{{ i }}" name="Keino+Cycles+Indian" value="{{ i }}" />
-        <label for="Indian-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+        <input type="radio" id="Leon-star{{ i }}" name="Leon" value="{{ i }}" />
+        <label for="Leon-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
       {% endfor %}
     </div>

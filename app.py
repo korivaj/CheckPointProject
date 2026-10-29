@@ -70,6 +70,15 @@ def claret():
     
     return render_template('claret.html')
 
-@app.route('/tayandj')
+@app.route('/tayandj',methods=['GET','POST'])
 def tayandj():
+    if request.method == "POST":
+    
+            Chris = request.form.get("Chris")
+            Claire = request.form.get("Claire")
+            Jill = request.form.get("Jill")
+            Leon = request.form.get("Leon")
+    
+            return render_template('tayandjSubmit.html',Chris = Chris,Claire = Claire,Jill = Jill,Leon = Leon)
+    
     return render_template('tayandj.html')

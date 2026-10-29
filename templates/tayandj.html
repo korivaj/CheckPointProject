@@ -3,22 +3,46 @@
 {%block content%}
 
 <h2>Rate these Resident Evil characters!</h2>
-<p>Hi</p>
+
 <form method="post">
 <div>
-    <img src="{{url_for('static', filename='images/anime/dbz.jpg')}}", class="anime_image">
-    
-</div>
-<div>
-    <img src="{{url_for('static', filename='images/anime/naruto.jpg')}}", class="anime_image">
+    <img src="{{url_for('static', filename='images/ResidentEvil/Chris.jpg')}}", class="anime_image">
+    <div class="star-rating">
+      {% for i in range(1, 6) %}
+        <input type="radio" id="Chris-star{{ i }}" name="Chris" value="{{ i }}" />
+        <label for="Chris-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+      {% endfor %}
+    </div>
 
 </div>
 <div>
-    <img src="{{url_for('static', filename='images/anime/one_piece.jpg')}}", class="anime_image">
+    <img src="{{url_for('static', filename='images/ResidentEvil/Claire.jpg')}}", class="anime_image">
+<div class="star-rating">
+      {% for i in range(1, 6) %}
+        <input type="radio" id="Claire-star{{ i }}" name="Claire" value="{{ i }}" />
+        <label for="Claire-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+      {% endfor %}
+    </div>
 
 </div>
 <div>
-    <img src="{{url_for('static', filename='images/anime/inuyasha.jpg')}}", class="anime_image">
+    <img src="{{url_for('static', filename='images/ResidentEvil/Jill.jpg')}}", class="anime_image">
+<div class="star-rating">
+      {% for i in range(1, 6) %}
+        <input type="radio" id="Jill-star{{ i }}" name="Jill" value="{{ i }}" />
+        <label for="Jill-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+      {% endfor %}
+    </div>
+
+</div>
+<div>
+    <img src="{{url_for('static', filename='images/ResidentEvil/Leon.jpg')}}", class="anime_image">
+<div class="star-rating">
+      {% for i in range(1, 6) %}
+        <input type="radio" id="Leon-star{{ i }}" name="Leon" value="{{ i }}" />
+        <label for="Leon-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+      {% endfor %}
+    </div>
 
 </div>
 
