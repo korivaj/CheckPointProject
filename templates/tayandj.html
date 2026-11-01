@@ -13,7 +13,7 @@
         <label for="Chris-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
       {% endfor %}
     </div>
-
+<br>
 </div>
 <div>
     <img src="{{url_for('static', filename='images/ResidentEvil/Claire.jpg')}}", class="anime_image">
@@ -23,7 +23,7 @@
         <label for="Claire-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
       {% endfor %}
     </div>
-
+<br>
 </div>
 <div>
     <img src="{{url_for('static', filename='images/ResidentEvil/Jill.jpg')}}", class="anime_image">
@@ -33,7 +33,7 @@
         <label for="Jill-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
       {% endfor %}
     </div>
-
+<br>
 </div>
 <div>
     <img src="{{url_for('static', filename='images/ResidentEvil/Leon.jpg')}}", class="anime_image">
@@ -43,9 +43,11 @@
         <label for="Leon-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
       {% endfor %}
     </div>
-
+<br>
 </div>
-
+<br>
 <button type="submit">Rate</button>
+<br>
 </form>
+<br>
 {%endblock content%}

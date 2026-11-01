@@ -15,27 +15,16 @@
     <h1>{{error}}</h1>
     {% endif %} {% block content %} {% endblock content %}
 
-    <ul>
-      <li>
+    
         <a href="{{url_for('home')}}" class="btn btn-primary">Home</a>
-      </li>
       <br>
-      <li>
-        <a href="{{url_for('profile')}}" class="btn btn-primary">Profile</a>
-      </li>
+        <a href="{{url_for('locks')}}" class="btn btn-primary">Locks</a>
       <br>
-      <li>
-        <a href="{{url_for('hurricane')}}" class="btn btn-primary">Hurricane</a>
-      </li>
+        <a href="{{url_for('hurricane')}}" class="btn btn-primary">Anime</a>
       <br>
-      <li>
         <a href="{{url_for('claret')}}" class="btn btn-primary">Bike</a>
-      </li>
       <br>
-      <li>
       <a href="{{ url_for('tayandj') }}" class="btn btn-primary">Resident Evil</a>
-      </li>
-    </ul>
 
     {%block scripts%} {%endblock scripts%}
   </body>

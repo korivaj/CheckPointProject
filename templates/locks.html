@@ -1,0 +1,56 @@
+{% extends "base.html" %} 
+
+{%block content%}
+
+<h2>Rate These Locks</h2>
+
+<form method="POST">
+
+  <div class="lock-item">
+    <img src="{{ url_for('static', filename='images/locks/american.jpg') }}" class="lock_image">
+    <div class="star-rating">
+      {% for i in range(1, 6) %}
+        <input type="radio" id="american-star{{ i }}" name="rating_american" value="{{ i }}" />
+        <label for="american-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">🔒</label>
+      {% endfor %}
+    </div>
+  </div>
+<br>
+  <div class="lock-item">
+    <img src="{{ url_for('static', filename='images/locks/link.jpg') }}" class="lock_image">
+    <div class="star-rating">
+      {% for i in range(1, 6) %}
+        <input type="radio" id="link-star{{ i }}" name="rating_link" value="{{ i }}" />
+        <label for="link-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">🔒</label>
+      {% endfor %}
+    </div>
+  </div>
+<br>
+  <div class="anime-item">
+    <img src="{{ url_for('static', filename='images/locks/Master_lock.jpg') }}" class="lock_image">
+    <div class="star-rating">
+      {% for i in range(1, 6) %}
+        <input type="radio" id="Master_lock-star{{ i }}" name="rating_Master_lock" value="{{ i }}" />
+        <label for="Master_lock-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">🔒</label>
+      {% endfor %}
+    </div>
+  </div>
+<br>
+
+  <div class="anime-item">
+    <img src="{{ url_for('static', filename='images/locks/Smart.jpg') }}" class="lock_image">
+    <div class="star-rating">
+      {% for i in range(1, 6) %}
+        <input type="radio" id="Smart-star{{ i }}" name="rating_Smart" value="{{ i }}" />
+        <label for="Smart-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">🔒</label>
+      {% endfor %}
+    </div>
+</div>
+<br>
+
+<button type="submit">Rate</button>
+<br>
+</form>
+<br>
+
+{%endblock content%}

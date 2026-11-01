@@ -5,7 +5,6 @@
 <h2>Rate these Anime</h2>
 <form method="POST">
 
-  <!-- DBZ -->
   <div class="anime-item">
     <img src="{{ url_for('static', filename='images/anime/dbz.jpg') }}" class="anime_image" alt="Dragon Ball Z">
     <div class="star-rating">
@@ -15,8 +14,7 @@
       {% endfor %}
     </div>
   </div>
-
-  <!-- Naruto -->
+<br>
   <div class="anime-item">
     <img src="{{ url_for('static', filename='images/anime/naruto.jpg') }}" class="anime_image" alt="Naruto">
     <div class="star-rating">
@@ -26,8 +24,7 @@
       {% endfor %}
     </div>
   </div>
-
-  <!-- One Piece -->
+<br>
   <div class="anime-item">
     <img src="{{ url_for('static', filename='images/anime/one_piece.jpg') }}" class="anime_image" alt="One Piece">
     <div class="star-rating">
@@ -37,8 +34,8 @@
       {% endfor %}
     </div>
   </div>
+<br>
 
-  <!-- Inuyasha -->
   <div class="anime-item">
     <img src="{{ url_for('static', filename='images/anime/inuyasha.jpg') }}" class="anime_image" alt="Inuyasha">
     <div class="star-rating">
@@ -48,7 +45,10 @@
       {% endfor %}
     </div>
 </div>
+<br>
 
 <button type="submit">Rate</button>
+
 </form>
+<br>
 {%endblock content%}
