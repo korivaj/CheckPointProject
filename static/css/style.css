@@ -52,4 +52,5 @@ box-shadow: 0 0 10px purple;
 .re_image{
     max-width: 250px;
     max-height: 250px;
+    box-shadow: 0 0 5px red;
 }
