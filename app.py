@@ -13,29 +13,13 @@ def locks():
 
         rating_american = request.form.get("rating_american","")
         rating_link = request.form.get("rating_link","")
-        rating_master_lock = request.form.get("rating_master_lock","")
-        rating_smart = request.form.get("rating_smart","")
+        rating_master_lock = request.form.get("rating_Master_lock","")
+        rating_smart = request.form.get("rating_Smart","")
 
-        return render_template('locksSubmit.html',rating_american = rating_american, rating_link = rating_link, rating_master_lock = rating_master_lock, rating_smart =rating_smart)
+        return render_template('locksSubmit.html',rating_american = rating_american, rating_link = rating_link, rating_master_lock = rating_master_lock, rating_smart = rating_smart)
 
     return render_template('locks.html')
 
-
-
-# @app.route('/feedbackForm',methods=['GET','POST'])
-# def feedback():
-#     if request.method == "POST":
-
-#         rating = request.form.get("rating",'').strip()
-#         feedback = request.form.get("feedback",'').strip()
-
-#         if not rating:
-#             error = "Please enter a rating"
-#             return render_template("feedbackForm.html",error=error)
-
-#         return render_template("feedbackSuccess.html",rating = rating,feedback = feedback)
-
-#     return render_template("feedbackForm.html")
 
 @app.route('/hurricane',methods=['GET','POST'])
 def hurricane():
