@@ -1,8 +1,11 @@
 body {
 font-family: Arial, sans-serif;
-margin: 40px;
-background-color: #f0f8ff;
+margin: 10px;
+background-color: #55D6BE;
 color: #333;
+text-align: center;
+font-size: 48;
+text-shadow: purple;
 }
 .container {
 max-width: 800px;
@@ -12,25 +15,34 @@ background-color: white;
 border-radius: 10px;
 box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-h1 {
-color: #2c3e50;
+h2 {
+color: #034F2E;
 text-align: center;
+font-size: 72px;
+font-weight: bold;
 }
 
-.navigation a {
-color: #3498db;
+a {
+color: #7D5BA6;
 text-decoration: none;
 font-weight: bold;
-margin: 0 10px;
+margin: 0 20px;
+font-size: 18px;
 }
-.navigation a:hover {
-color: #2980b9;
+
+a:visited {
+    color: #7D5BA6;
+}
+
+a:hover {
+color: #7D5BA6;
 text-decoration: underline;
 }
 
 .anime_image {
 max-width: 190px;
 max-height: 281px;
+box-shadow: 0 0 10px purple;
 }
 .bike_image{
     max-width: 500px;
@@ -38,7 +50,6 @@ max-height: 281px;
     box-shadow: 0 0 10px purple;
 }
 .re_image{
-    max-width: 400px;
-    max-height: 400px;
-    box-shadow: 0 0 5px red;
+    max-width: 250px;
+    max-height: 250px;
 }

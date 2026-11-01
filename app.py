@@ -6,25 +6,19 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/profile',methods=['GET','POST'])
-def profile():
+@app.route('/locks',methods=['GET','POST'])
+def locks():
 
     if request.method == "POST":
 
-        name = request.form.get("name", '').strip()
-        email = request.form.get("email",'').strip()
-        quant = request.form.get("quant" , "1").strip()
-        comments = request.form.get("comments","").strip()
-        relation = request.form.get("rel","").strip()
-        accomodations = request.form.get("accomodations") == "yes"
+        rating_american = request.form.get("rating_american","")
+        rating_link = request.form.get("rating_link","")
+        rating_master_lock = request.form.get("rating_master_lock","")
+        rating_smart = request.form.get("rating_smart","")
 
-        if not name or not email or not quant or not relation:
-            error = "Please fill out all the required fields"
-            return render_template("profileForm.html",error=error)
+        return render_template('locksSubmit.html',rating_american = rating_american, rating_link = rating_link, rating_master_lock = rating_master_lock, rating_smart =rating_smart)
 
-        return render_template('profileSuccess.html',name=name,email=email,quant=quant,comments=comments,rel=relation,accomodations=accomodations)
-
-    return render_template('profileForm.html')
+    return render_template('locks.html')
 
 
 

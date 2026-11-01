@@ -5,50 +5,50 @@
 <h2>Rate these Anime</h2>
 <form method="POST">
 
-  <!-- DBZ -->
   <div class="anime-item">
     <img src="{{ url_for('static', filename='images/anime/dbz.jpg') }}" class="anime_image" alt="Dragon Ball Z">
     <div class="star-rating">
       {% for i in range(1, 6) %}
         <input type="radio" id="dbz-star{{ i }}" name="rating_dbz" value="{{ i }}" />
-        <label for="dbz-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+        <label for="dbz-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">©</label>
       {% endfor %}
     </div>
   </div>
-
-  <!-- Naruto -->
+<br>
   <div class="anime-item">
     <img src="{{ url_for('static', filename='images/anime/naruto.jpg') }}" class="anime_image" alt="Naruto">
     <div class="star-rating">
       {% for i in range(1, 6) %}
         <input type="radio" id="naruto-star{{ i }}" name="rating_naruto" value="{{ i }}" />
-        <label for="naruto-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+        <label for="naruto-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">©</label>
       {% endfor %}
     </div>
   </div>
-
-  <!-- One Piece -->
+<br>
   <div class="anime-item">
     <img src="{{ url_for('static', filename='images/anime/one_piece.jpg') }}" class="anime_image" alt="One Piece">
     <div class="star-rating">
       {% for i in range(1, 6) %}
         <input type="radio" id="onepiece-star{{ i }}" name="rating_onepiece" value="{{ i }}" />
-        <label for="onepiece-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+        <label for="onepiece-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">©</label>
       {% endfor %}
     </div>
   </div>
+<br>
 
-  <!-- Inuyasha -->
   <div class="anime-item">
     <img src="{{ url_for('static', filename='images/anime/inuyasha.jpg') }}" class="anime_image" alt="Inuyasha">
     <div class="star-rating">
       {% for i in range(1, 6) %}
         <input type="radio" id="inuyasha-star{{ i }}" name="rating_inuyasha" value="{{ i }}" />
-        <label for="inuyasha-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">★</label>
+        <label for="inuyasha-star{{ i }}" title="{{ i }} star{% if i > 1 %}s{% endif %}">©</label>
       {% endfor %}
     </div>
 </div>
+<br>
 
 <button type="submit">Rate</button>
+
 </form>
+<br>
 {%endblock content%}
