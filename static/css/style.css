@@ -38,6 +38,7 @@ max-height: 281px;
     box-shadow: 0 0 10px purple;
 }
 .re_image{
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 400px;
+    max-height: 400px;
+    box-shadow: 0 0 5px red;
 }
