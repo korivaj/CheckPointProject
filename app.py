@@ -60,3 +60,7 @@ def tayandj():
             return render_template('tayandjSubmit.html',Chris = Chris,Claire = Claire,Jill = Jill,Leon = Leon)
     
     return render_template('tayandj.html')
+
+@app.route("/credit")
+def credit():
+     return render_template("credit.html")

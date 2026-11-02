@@ -54,3 +54,7 @@ box-shadow: 0 0 10px purple;
     max-height: 250px;
     box-shadow: 0 0 5px red;
 }
+.lock_image{
+    max-width: 345px;
+    max-height: 579;
+}
