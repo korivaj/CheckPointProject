@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}{{super()}} Claret Admin {%endblock%}
+{% block content %}
+<h1>Bike Ratings</h1>
+<table class=""table table-striped" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Panigale</th>
+        <th>Diavel</th>
+        <th>scout_bobber</th>
+        <th>Ninja</th>
+        <th>Indian</th>
+        <th>Created At</th>
+    </tr>
+    {% for bikerating in bikeratings %}
+    <tr>
+        <td>{{ bikeratings.id }}</td>
+        <td>{{ bikeratings.panigale }}</td>
+        <td>{{ bikeratings.diavel }}</td>
+        <td>{{ bikeratings.scout_bobber }}</td>
+        <td>{{ bikeratings.ninja }}</td>
+        <td>{{ bikeratings.indian }}</td>
+        <td>{{ bikeratings.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
