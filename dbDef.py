@@ -8,7 +8,8 @@ class LockRatings(db.Model):
     link = db.Column(db.Integer, nullable=False)
     master_lock = db.Column(db.Integer, nullable=False)
     smart = db.Column(db.Integer, nullable=False)
-    
+
+    name = db.Column(db.String(50),nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now(timezone.utc))
 
 class AnimeRatings(db.Model):
@@ -18,7 +19,8 @@ class AnimeRatings(db.Model):
     naruto = db.Column(db.Integer, nullable=False)
     onepiece = db.Column(db.Integer, nullable=False)
     inuyasha = db.Column(db.Integer, nullable=False)
-    
+
+    name = db.Column(db.String(50),nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now(timezone.utc))
 
 class BikeRatings(db.Model):
@@ -29,7 +31,8 @@ class BikeRatings(db.Model):
     scout_bobber = db.Column(db.Integer, nullable=False)
     Ninja = db.Column(db.Integer, nullable=False)
     Indian = db.Column(db.Integer, nullable=False)
-    
+
+    name = db.Column(db.String(50),nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now(timezone.utc))
 
 class ResidentRatings(db.Model):
@@ -39,5 +42,6 @@ class ResidentRatings(db.Model):
     Claire = db.Column(db.Integer, nullable=False)
     Jill = db.Column(db.Integer, nullable=False)
     Leon = db.Column(db.Integer, nullable=False)
-    
+
+    name = db.Column(db.String(50),nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now(timezone.utc))
