@@ -1,6 +1,14 @@
 from flask import Flask,render_template,request
-
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime, timezone
 app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///guestlist.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+from dbDef import LockRatings,AnimeRatings,BikeRatings,ResidentRatings
 
 @app.route("/")
 def home():
@@ -16,6 +24,24 @@ def locks():
         rating_master_lock = request.form.get("rating_Master_lock","")
         rating_smart = request.form.get("rating_Smart","")
 
+        try:
+            newRating = LockRatings(
+                american = rating_american,
+                link = rating_link,
+                master_lock = rating_master_lock,
+                smart = rating_smart
+            )
+            
+            db.session.add(newRating)
+            db.session.commit()
+
+        except Exception as e:
+            db.session.rollback()
+            print(e)
+            return render_template('locks.html')
+
+
+
         return render_template('locksSubmit.html',rating_american = rating_american, rating_link = rating_link, rating_master_lock = rating_master_lock, rating_smart = rating_smart)
 
     return render_template('locks.html')
@@ -29,6 +55,23 @@ def hurricane():
             rating_naruto = request.form.get("rating_naruto","")
             rating_onepiece = request.form.get("rating_onepiece","")
             rating_inuyasha = request.form.get("rating_inuyasha","")
+
+            try:
+                newRating = AnimeRatings(
+                dbz = rating_dbz,
+                naruto = rating_naruto,
+                onepiece = rating_naruto,
+                inuyasha = rating_inuyasha
+                )
+                
+                db.session.add(newRating)
+                db.session.commit()
+            
+            except Exception as e:
+                    db.session.rollback()
+                    print(e)
+                    return render_template('hurricane.html')
+
     
             return render_template('hurricaneSubmit.html',rating_dbz = rating_dbz,rating_naruto = rating_naruto,rating_onepiece = rating_onepiece,rating_inuyasha = rating_inuyasha)
 
@@ -38,13 +81,32 @@ def hurricane():
 def claret():
     if request.method == "POST":
 
-        Panigale = request.form.get("DUCATI-Panigale")
-        Diavel = request.form.get("DucactiDiavel")
-        scout_bobber = request.form.get("indian-scout-bobber")
-        Ninja = request.form.get("Kawasaki-Ninja-H2R")
-        Indian = request.form.get("Keino+Cycles+Indian")
+        rating_Panigale = request.form.get("DUCATI-Panigale")
+        rating_Diavel = request.form.get("DucactiDiavel")
+        rating_scout_bobber = request.form.get("indian-scout-bobber")
+        rating_Ninja = request.form.get("Kawasaki-Ninja-H2R")
+        rating_Indian = request.form.get("Keino+Cycles+Indian")
 
-        return render_template('claretSubmit.html',Panigale = Panigale, Diavel = Diavel, scout_bobber = scout_bobber, Ninja = Ninja, Indian = Indian)
+        try:
+            newRating = BikeRatings(
+            Panigale = rating_Panigale,
+            Diavel = rating_Diavel,
+            scout_bobber = rating_scout_bobber,
+            Ninja = rating_Ninja,
+            Indian = rating_Indian
+            )
+            
+            db.session.add(newRating)
+            db.session.commit()
+        
+        except Exception as e:
+                db.session.rollback()
+                print(e)
+                return render_template('claret.html')
+
+
+
+        return render_template('claretSubmit.html',Panigale = rating_Panigale, Diavel = rating_Diavel, scout_bobber = rating_scout_bobber, Ninja = rating_Ninja, Indian = rating_Indian)
     
     return render_template('claret.html')
 
@@ -52,12 +114,30 @@ def claret():
 def tayandj():
     if request.method == "POST":
     
-            Chris = request.form.get("Chris")
-            Claire = request.form.get("Claire")
-            Jill = request.form.get("Jill")
-            Leon = request.form.get("Leon")
+            rating_Chris = request.form.get("Chris")
+            rating_Claire = request.form.get("Claire")
+            rating_Jill = request.form.get("Jill")
+            rating_Leon = request.form.get("Leon")
+
+            try:
+                newRating = ResidentRatings(
+                Chris = rating_Chris,
+                Claire = rating_Claire,
+                Jill = rating_Jill,
+                Leon = rating_Leon
+                )
+                
+                db.session.add(newRating)
+                db.session.commit()
+            
+            except Exception as e:
+                    db.session.rollback()
+                    print(e)
+                    return render_template('tayandj.html')
+
+
     
-            return render_template('tayandjSubmit.html',Chris = Chris,Claire = Claire,Jill = Jill,Leon = Leon)
+            return render_template('tayandjSubmit.html',Chris = rating_Chris, Claire = rating_Claire, Jill = rating_Jill, Leon = rating_Leon)
     
     return render_template('tayandj.html')
 
