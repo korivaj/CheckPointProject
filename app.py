@@ -30,13 +30,13 @@ def locks():
 
         try:
             newRating = LockRatings(
-                american = rating_american,
-                link = rating_link,
-                master_lock = rating_master_lock,
-                smart = rating_smart,
-                name = rater_name,
+                american = rating_american, # type: ignore
+                link = rating_link, # type: ignore
+                master_lock = rating_master_lock, # type: ignore
+                smart = rating_smart, # type: ignore
+                name = rater_name, # type: ignore
                 
-                created_at = datetime.now()
+                created_at = datetime.now() # type: ignore
             )
             
             db.session.add(newRating)
@@ -66,13 +66,13 @@ def hurricane():
 
             try:
                 newRating = AnimeRatings(
-                dbz = rating_dbz,
-                naruto = rating_naruto,
-                onepiece = rating_naruto,
-                inuyasha = rating_inuyasha,
-                name = rater_name,
+                dbz = rating_dbz, # type: ignore
+                naruto = rating_naruto, # type: ignore
+                onepiece = rating_naruto, # type: ignore
+                inuyasha = rating_inuyasha, # type: ignore
+                name = rater_name, # type: ignore
 
-                created_at = datetime.now()
+                created_at = datetime.now() # type: ignore
                 )
                 
                 db.session.add(newRating)
@@ -101,14 +101,14 @@ def claret():
 
         try:
             newRating = BikeRatings(
-            Panigale = rating_Panigale,
-            Diavel = rating_Diavel,
-            scout_bobber = rating_scout_bobber,
-            Ninja = rating_Ninja,
-            Indian = rating_Indian,
-            name = rater_name,
+            Panigale = rating_Panigale, # type: ignore
+            Diavel = rating_Diavel, # type: ignore
+            scout_bobber = rating_scout_bobber, # type: ignore
+            Ninja = rating_Ninja, # type: ignore
+            Indian = rating_Indian, # type: ignore
+            name = rater_name, # type: ignore
 
-            created_at = datetime.now()
+            created_at = datetime.now() # type: ignore
             )
             
             db.session.add(newRating)
@@ -137,13 +137,13 @@ def tayandj():
 
             try:
                 newRating = ResidentRatings(
-                Chris = rating_Chris,
-                Claire = rating_Claire,
-                Jill = rating_Jill,
-                Leon = rating_Leon,
-                name = rater_name,
+                Chris = rating_Chris, # type: ignore
+                Claire = rating_Claire, # type: ignore
+                Jill = rating_Jill, # type: ignore
+                Leon = rating_Leon, # type: ignore
+                name = rater_name, # type: ignore
 
-                created_at = datetime.now()
+                created_at = datetime.now() # type: ignore
                 )
                 
                 db.session.add(newRating)
