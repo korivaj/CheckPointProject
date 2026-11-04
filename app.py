@@ -3,12 +3,15 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime, timezone
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///guestlist.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ratings.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
 from dbDef import LockRatings,AnimeRatings,BikeRatings,ResidentRatings
+
+with app.app_context():
+    db.create_all()
 
 @app.route("/")
 def home():
