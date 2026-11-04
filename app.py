@@ -34,7 +34,9 @@ def locks():
                 link = rating_link,
                 master_lock = rating_master_lock,
                 smart = rating_smart,
-                name = rater_name
+                name = rater_name,
+                
+                created_at = datetime.now()
             )
             
             db.session.add(newRating)
@@ -68,7 +70,9 @@ def hurricane():
                 naruto = rating_naruto,
                 onepiece = rating_naruto,
                 inuyasha = rating_inuyasha,
-                name = rater_name
+                name = rater_name,
+
+                created_at = datetime.now()
                 )
                 
                 db.session.add(newRating)
@@ -102,7 +106,9 @@ def claret():
             scout_bobber = rating_scout_bobber,
             Ninja = rating_Ninja,
             Indian = rating_Indian,
-            name = rater_name
+            name = rater_name,
+
+            created_at = datetime.now()
             )
             
             db.session.add(newRating)
@@ -135,7 +141,9 @@ def tayandj():
                 Claire = rating_Claire,
                 Jill = rating_Jill,
                 Leon = rating_Leon,
-                name = rater_name
+                name = rater_name,
+
+                created_at = datetime.now()
                 )
                 
                 db.session.add(newRating)

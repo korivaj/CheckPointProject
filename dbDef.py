@@ -10,7 +10,7 @@ class LockRatings(db.Model):
     smart = db.Column(db.Integer, nullable=False)
 
     name = db.Column(db.String(50),nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.now(timezone.utc))
+    created_at = db.Column(db.DateTime)
 
 class AnimeRatings(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -21,7 +21,7 @@ class AnimeRatings(db.Model):
     inuyasha = db.Column(db.Integer, nullable=False)
 
     name = db.Column(db.String(50),nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.now(timezone.utc))
+    created_at = db.Column(db.DateTime)
 
 class BikeRatings(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -33,7 +33,7 @@ class BikeRatings(db.Model):
     Indian = db.Column(db.Integer, nullable=False)
 
     name = db.Column(db.String(50),nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.now(timezone.utc))
+    created_at = db.Column(db.DateTime)
 
 class ResidentRatings(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -44,4 +44,4 @@ class ResidentRatings(db.Model):
     Leon = db.Column(db.Integer, nullable=False)
 
     name = db.Column(db.String(50),nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.now(timezone.utc))
+    created_at = db.Column(db.DateTime)
