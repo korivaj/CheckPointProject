@@ -168,3 +168,8 @@ def credit():
 @app.route("/admin")
 def admin():
      return render_template("admin.html")
+
+@app.route("/admin/claret")
+def claretResults():
+     bikeratings = BikeRatings.query.all()
+     return render_template("claretRating.html", bikeratings = bikeratings)
