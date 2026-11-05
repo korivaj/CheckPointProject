@@ -50,18 +50,18 @@ def locks():
         except Exception as e:
             db.session.rollback()
             print('\033[31m' + str(e) + '\033[0m')
-            return render_template('locks.html')
+            return render_template('/locks/locks.html')
 
 
 
-        return render_template('locksSubmit.html',rating_american = rating_american, rating_link = rating_link, rating_master_lock = rating_master_lock, rating_smart = rating_smart, name = rater_name)
+        return render_template('/locks/locksSubmit.html',rating_american = rating_american, rating_link = rating_link, rating_master_lock = rating_master_lock, rating_smart = rating_smart, name = rater_name)
 
-    return render_template('locks.html')
+    return render_template('/locks/locks.html')
 
 @app.route("/admin/locksResults")
 def locksResults():
      locksResults = LockRatings.query.all()
-     return render_template("locksResults.html", locksResults = locksResults)
+     return render_template("/locks/locksResults.html", locksResults = locksResults)
 
 
 @app.route('/hurricane',methods=['GET','POST'])
@@ -91,17 +91,17 @@ def hurricane():
             except Exception as e:
                     db.session.rollback()
                     print('\033[31m' + str(e) + '\033[0m')
-                    return render_template('hurricane.html')
+                    return render_template('/hurricane/hurricane.html')
 
     
-            return render_template('hurricaneSubmit.html',rating_dbz = rating_dbz,rating_naruto = rating_naruto,rating_onepiece = rating_onepiece,rating_inuyasha = rating_inuyasha, name = rater_name)
+            return render_template('/hurricane/hurricaneSubmit.html',rating_dbz = rating_dbz,rating_naruto = rating_naruto,rating_onepiece = rating_onepiece,rating_inuyasha = rating_inuyasha, name = rater_name)
 
-    return render_template('hurricane.html')
+    return render_template('/hurricane/hurricane.html')
 
 @app.route("/admin/hurricaneResults")
 def hurricaneResults():
      hurricaneResults = AnimeRatings.query.all()
-     return render_template("hurricaneResults.html", hurricaneResults = hurricaneResults)
+     return render_template("/hurricane/hurricaneResults.html", hurricaneResults = hurricaneResults)
 
 
 @app.route('/claret',methods=['GET','POST'])
@@ -133,18 +133,18 @@ def claret():
         except Exception as e:
                 db.session.rollback()
                 print('\033[31m' + str(e) + '\033[0m')
-                return render_template('claret.html')
+                return render_template('/claret/claret.html')
 
 
 
-        return render_template('claretSubmit.html',Panigale = rating_Panigale, Diavel = rating_Diavel, scout_bobber = rating_scout_bobber, Ninja = rating_Ninja, Indian = rating_Indian, name = rater_name)
+        return render_template('/claret/claretSubmit.html',Panigale = rating_Panigale, Diavel = rating_Diavel, scout_bobber = rating_scout_bobber, Ninja = rating_Ninja, Indian = rating_Indian, name = rater_name)
     
-    return render_template('claret.html')
+    return render_template('/claret/claret.html')
 
 @app.route("/admin/claret")
 def claretResults():
      bikeratings = BikeRatings.query.all()
-     return render_template("claretRating.html", bikeratings = bikeratings)
+     return render_template("/claret/claretRating.html", bikeratings = bikeratings)
 
 
 @app.route('/tayandj',methods=['GET','POST'])
@@ -174,18 +174,18 @@ def tayandj():
             except Exception as e:
                     db.session.rollback()
                     print('\033[31m' + str(e) + '\033[0m')
-                    return render_template('tayandj.html')
+                    return render_template('/tayandj/tayandj.html')
 
 
     
-            return render_template('tayandjSubmit.html',Chris = rating_Chris, Claire = rating_Claire, Jill = rating_Jill, Leon = rating_Leon, name = rater_name)
+            return render_template('/tayandj/tayandjSubmit.html',Chris = rating_Chris, Claire = rating_Claire, Jill = rating_Jill, Leon = rating_Leon, name = rater_name)
     
-    return render_template('tayandj.html')
+    return render_template('/tayandj/tayandj.html')
 
 @app.route("/admin/tayandjResults")
 def tayandjResults():
      residentRatings = ResidentRatings.query.all()
-     return render_template("tayandjResults.html", residentRatings = residentRatings)
+     return render_template("/tayandj/tayandjResults.html", residentRatings = residentRatings)
 
 
 @app.route("/credit")
