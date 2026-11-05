@@ -58,3 +58,14 @@ box-shadow: 0 0 10px purple;
     max-width: 345px;
     max-height: 579;
 }
+tr {
+    box-shadow: purple;
+    border: 10px;
+    text-shadow: crimson;
+    border: 5px;
+}
+
+td {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
