@@ -2,9 +2,10 @@
 {% block title %}{{super()}} Claret Admin {%endblock%}
 {% block content %}
 <h1>Bike Ratings</h1>
-<table> <!-- class="table" table-striped" border="1" -->
+<table class="table table-striped" border="1" >
     <tr>
         <th>ID</th>
+        <th>Name</th>
         <th>Panigale</th>
         <th>Diavel</th>
         <th>scout_bobber</th>
@@ -15,6 +16,7 @@
     {% for bikerating in bikeratings %}
     <tr>
         <td>{{ bikerating.id }}</td>
+        <td>{{ bikerating.name }}</td>
         <td>{{ bikerating.Panigale }}</td>
         <td>{{ bikerating.Diavel }}</td>
         <td>{{ bikerating.scout_bobber }}</td>

@@ -1,0 +1,28 @@
+{% extends 'baseAdmin.html' %}
+{% block title %}{{super()}} - Resident Admin {% endblock %}
+{% block content %}
+<h1>Resident Ratings</h1>
+<table class="table table-striped" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Chris</th>
+        <th>Claire</th>
+        <th>Leon</th>
+        <th>Jill</th>
+        <th>Created At</th>
+    </tr>
+    {% for feedback in residentRatings %}
+    <tr>
+        <td>{{ feedback.id }}</td>
+        <td>{{ feedback.name }}</td>
+        <td>{{ feedback.Chris }}</td>
+        <td>{{ feedback.Claire }}</td>
+        <td>{{ feedback.Leon }}</td>
+        <td>{{ feedback.Jill }}</td>
+        <td>{{ feedback.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

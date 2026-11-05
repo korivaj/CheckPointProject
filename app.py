@@ -173,3 +173,8 @@ def admin():
 def claretResults():
      bikeratings = BikeRatings.query.all()
      return render_template("claretRating.html", bikeratings = bikeratings)
+
+@app.route("/admin/tayandjResults")
+def tayandjResults():
+     residentRatings = ResidentRatings.query.all()
+     return render_template("tayandjResults.html", residentRatings = residentRatings)
