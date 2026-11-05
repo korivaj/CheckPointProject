@@ -17,6 +17,11 @@ with app.app_context():
 def home():
     return render_template('index.html')
 
+@app.route("/admin")
+def admin():
+     return render_template("admin.html")
+
+
 @app.route('/locks',methods=['GET','POST'])
 def locks():
 
@@ -53,6 +58,11 @@ def locks():
 
     return render_template('locks.html')
 
+@app.route("/admin/locksResults")
+def locksResults():
+     locksResults = LockRatings.query.all()
+     return render_template("locksResults.html", locksResults = locksResults)
+
 
 @app.route('/hurricane',methods=['GET','POST'])
 def hurricane():
@@ -87,6 +97,12 @@ def hurricane():
             return render_template('hurricaneSubmit.html',rating_dbz = rating_dbz,rating_naruto = rating_naruto,rating_onepiece = rating_onepiece,rating_inuyasha = rating_inuyasha, name = rater_name)
 
     return render_template('hurricane.html')
+
+@app.route("/admin/hurricaneResults")
+def hurricaneResults():
+     hurricaneResults = AnimeRatings.query.all()
+     return render_template("hurricaneResults.html", hurricaneResults = hurricaneResults)
+
 
 @app.route('/claret',methods=['GET','POST'])
 def claret():
@@ -125,6 +141,12 @@ def claret():
     
     return render_template('claret.html')
 
+@app.route("/admin/claret")
+def claretResults():
+     bikeratings = BikeRatings.query.all()
+     return render_template("claretRating.html", bikeratings = bikeratings)
+
+
 @app.route('/tayandj',methods=['GET','POST'])
 def tayandj():
     if request.method == "POST":
@@ -160,21 +182,12 @@ def tayandj():
     
     return render_template('tayandj.html')
 
-@app.route("/credit")
-def credit():
-     return render_template("credit.html")
-
-
-@app.route("/admin")
-def admin():
-     return render_template("admin.html")
-
-@app.route("/admin/claret")
-def claretResults():
-     bikeratings = BikeRatings.query.all()
-     return render_template("claretRating.html", bikeratings = bikeratings)
-
 @app.route("/admin/tayandjResults")
 def tayandjResults():
      residentRatings = ResidentRatings.query.all()
      return render_template("tayandjResults.html", residentRatings = residentRatings)
+
+
+@app.route("/credit")
+def credit():
+     return render_template("credit.html")
