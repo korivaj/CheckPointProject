@@ -163,3 +163,8 @@ def tayandj():
 @app.route("/credit")
 def credit():
      return render_template("credit.html")
+
+
+@app.route("/admin")
+def admin():
+     return render_template("admin.html")
