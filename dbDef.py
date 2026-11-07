@@ -12,7 +12,7 @@ class LockRatings(db.Model):
     name = db.Column(db.String(50),nullable=False)
     created_at = db.Column(db.DateTime)
 
-class AnimeRatings(db.Model):
+class AnimeRe`atings(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     
     dbz = db.Column(db.Integer, nullable=False)

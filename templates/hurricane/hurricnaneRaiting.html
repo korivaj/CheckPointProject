@@ -1,0 +1,28 @@
+{% extends 'baseAdmin.html' %}
+{% block title %}{{super()}} - Hurricane Admin {% endblock %}
+{% block content %}
+<h1>Anime Ratings</h1>
+<table class="table table-striped" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>dbz</th>
+        <th>naruto</th>
+        <th>onepiece</th>
+        <th>Jinuyasha</th>
+        <th>Created At</th>
+    </tr>
+    {% for feedback in hurricaneRatings %}
+    <tr>
+        <td>{{ feedback.id }}</td>
+        <td>{{ feedback.name }}</td>
+        <td>{{ feedback.dbz }}</td>
+        <td>{{ feedback.naruto }}</td>
+        <td>{{ feedback.onepiece }}</td>
+        <td>{{ feedback.inuyasha }}</td>
+        <td>{{ feedback.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
