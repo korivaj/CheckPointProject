@@ -1,0 +1,28 @@
+{% extends 'baseAdmin.html' %}
+{% block title %}{{super()}} - Locks Admin {% endblock %}
+{% block content %}
+<h1>Locks Ratings</h1>
+<table class="table table-striped" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>american</th>
+        <th>link</th>
+        <th>master_lock</th>
+        <th>smart</th>
+        <th>Created At</th>
+    </tr>
+    {% for feedback in locksResults %}
+    <tr>
+        <td>{{ feedback.id }}</td>
+        <td>{{ feedback.name }}</td>
+        <td>{{ feedback.american }}</td>
+        <td>{{ feedback.link }}</td>
+        <td>{{ feedback.master_lock }}</td>
+        <td>{{ feedback.smart }}</td>
+        <td>{{ feedback.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
